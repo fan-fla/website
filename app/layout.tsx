@@ -6,12 +6,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -43,6 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt" className={`${poppins.variable} ${inter.variable} h-full`}>
+      <head>
+        <link rel="preconnect" href="https://wa.me" />
+      </head>
       <body className="h-full font-inter antialiased">{children}</body>
     </html>
   );

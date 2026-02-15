@@ -11,6 +11,7 @@ export function HeroSection() {
           alt="Fla Fla cookies artesanais"
           fill
           loading="eager"
+          fetchPriority="high"
         />
 
         <div className="absolute inset-x-4 bottom-8 md:inset-x-auto md:bottom-12 md:left-1/2 md:w-[600px] md:-translate-x-1/2 lg:bottom-[60px] lg:w-[900px]">
