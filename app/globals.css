@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  /* Design System Variables */
+  --accent-green: #6B8E5A;
+  --accent-honey: #D4A843;
+  --accent-terracotta: #C45D3E;
+  --bg-cream: #F5E6D0;
+  --bg-dark: #3E2723;
+  --bg-warm-light: #FDF5EC;
+  --bg-white: #FFFFFF;
+  --border-light: #EDE0D0;
+  --border-warm: #E0D0BC;
+  --text-body: #5C3D2E;
+  --text-cream: #F5E6D0;
+  --text-dark: #3E2723;
+  --text-muted: #8B6F5E;
+  --text-white: #FFFFFF;
+
+  /* Brand Colors */
+  --flafla-orange: #f46535;
+  --flafla-gold: #E8A832;
+  --flafla-green: #3F8C4A;
+  --flafla-terracotta: #D4451A;
+  --flafla-dark-brown: #2D1B14;
+  --flafla-dark-section: #483832;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  .font-poppins {
+    font-family: var(--font-poppins), "Poppins", sans-serif;
+  }
+
+  .font-inter {
+    font-family: var(--font-inter), "Inter", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
