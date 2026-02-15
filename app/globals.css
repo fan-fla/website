@@ -58,3 +58,27 @@
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+/* Skip to content link - accessible navigation */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 12px 24px;
+  background-color: var(--flafla-dark-brown);
+  color: white;
+  font-family: var(--font-inter), "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--flafla-orange);
+  outline-offset: 2px;
+}

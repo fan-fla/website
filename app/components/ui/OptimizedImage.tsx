@@ -5,6 +5,7 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   fill?: boolean;
+  loading?: "lazy" | "eager";
 }
 
 export function OptimizedImage({
@@ -14,6 +15,7 @@ export function OptimizedImage({
   width,
   height,
   fill = false,
+  loading = "lazy",
 }: OptimizedImageProps) {
   // Derive WebP path from original path
   const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, ".webp");
@@ -31,6 +33,7 @@ export function OptimizedImage({
         width={width}
         height={height}
         className={imgClasses}
+        loading={loading}
       />
     </picture>
   );

@@ -1,13 +1,29 @@
 "use client";
 
 import { MessageCircle, Menu, X, Instagram, Facebook } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FlaFlaLogo } from "@/app/components/brand/FlaFlaLogo";
 import { navLinks } from "@/app/data/navigation";
 import { siteConfig } from "@/app/data/site";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  // ESC key to close mobile menu and return focus
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-[0_2px_16px_rgba(45,27,20,0.12)]">
@@ -50,9 +66,11 @@ export function Header() {
           </a>
 
           <button
+            ref={menuButtonRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="flex h-10 w-10 items-center justify-center"
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6 text-[var(--text-dark)]" />

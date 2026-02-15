@@ -3,6 +3,7 @@ interface ResponsiveImageProps {
   alt: string;
   fill?: boolean;
   className?: string;
+  loading?: "lazy" | "eager";
 }
 
 export function ResponsiveImage({
@@ -10,6 +11,7 @@ export function ResponsiveImage({
   alt,
   fill = false,
   className = "",
+  loading = "lazy",
 }: ResponsiveImageProps) {
   const extension = basePath.endsWith(".jpg") ? ".jpg" : ".png";
   const pathWithoutExt = basePath.replace(/\.(png|jpg)$/, "");
@@ -47,6 +49,7 @@ export function ResponsiveImage({
         src={`${pathWithoutExt}${extension}`}
         alt={alt}
         className={`${baseClasses} ${className}`}
+        loading={loading}
       />
     </picture>
   );

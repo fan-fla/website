@@ -12,8 +12,14 @@ import { Footer } from "@/app/components/sections/Footer";
 export default function FlaFlaPage() {
   return (
     <div className="min-h-screen w-full bg-[var(--bg-cream)]">
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Ir para o conteúdo principal
+      </a>
       <Header />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <SoulSection />
         <SaboresSection />

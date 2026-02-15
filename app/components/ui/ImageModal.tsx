@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
+import { useFocusTrap } from "@/app/hooks/useFocusTrap";
+import { useReturnFocus } from "@/app/hooks/useReturnFocus";
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -16,6 +18,12 @@ export function ImageModal({
   imageSrc,
   imageAlt,
 }: ImageModalProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const focusTrapRef = useFocusTrap<HTMLDivElement>(isOpen);
+
+  // Restore focus to previous element when modal closes
+  useReturnFocus(isOpen);
+
   // ESC key listener
   useEffect(() => {
     if (!isOpen) return;
@@ -30,15 +38,27 @@ export function ImageModal({
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
+  // Focus close button when modal opens
+  useEffect(() => {
+    if (isOpen && closeButtonRef.current) {
+      closeButtonRef.current.focus();
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
     <div
+      ref={focusTrapRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Imagem ampliada: ${imageAlt}`}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 transition-opacity duration-300"
       onClick={onClose}
     >
       {/* Close button */}
       <button
+        ref={closeButtonRef}
         onClick={onClose}
         className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Fechar"
