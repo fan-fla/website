@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import { X } from "lucide-react";
 
 interface ImageModalProps {
@@ -52,13 +51,17 @@ export function ImageModal({
         className="relative max-h-[90vh] max-w-[90vw] animate-fade-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          width={800}
-          height={600}
-          className="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-lg object-contain"
-        />
+        <picture>
+          <source
+            srcSet={imageSrc.replace(/\.(png|jpg|jpeg)$/i, ".webp")}
+            type="image/webp"
+          />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-lg object-contain"
+          />
+        </picture>
       </div>
     </div>
   );

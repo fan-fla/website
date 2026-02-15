@@ -18,14 +18,31 @@ export function ResponsiveImage({
 
   return (
     <picture>
+      {/* Mobile - WebP first, then fallback */}
+      <source
+        media="(max-width: 767px)"
+        srcSet={`${pathWithoutExt}-mobile.webp`}
+        type="image/webp"
+      />
       <source
         media="(max-width: 767px)"
         srcSet={`${pathWithoutExt}-mobile${extension}`}
+      />
+
+      {/* Tablet - WebP first, then fallback */}
+      <source
+        media="(max-width: 1023px)"
+        srcSet={`${pathWithoutExt}-tablet.webp`}
+        type="image/webp"
       />
       <source
         media="(max-width: 1023px)"
         srcSet={`${pathWithoutExt}-tablet${extension}`}
       />
+
+      {/* Desktop - WebP first, then fallback */}
+      <source srcSet={`${pathWithoutExt}.webp`} type="image/webp" />
+
       <img
         src={`${pathWithoutExt}${extension}`}
         alt={alt}

@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ZoomIn } from "lucide-react";
 import { siteConfig } from "@/app/data/site";
 import { ImageModal } from "./ImageModal";
+import { OptimizedImage } from "./OptimizedImage";
 
 interface ProductCardProps {
   name: string;
@@ -30,7 +30,7 @@ export function ProductCard({
           onClick={() => setIsModalOpen(true)}
           className="group relative h-[180px] w-full cursor-pointer overflow-hidden md:h-[200px] lg:h-[220px]"
         >
-          <Image src={image} alt={name} fill className="object-cover" />
+          <OptimizedImage src={image} alt={name} fill className="object-cover" />
 
           {/* Hover overlay - only on desktop (lg+) */}
           <div className="absolute inset-0 hidden items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:flex">

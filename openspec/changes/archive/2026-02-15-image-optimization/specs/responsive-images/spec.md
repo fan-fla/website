@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: ResponsiveImage component serves device-appropriate images
 
@@ -41,42 +41,7 @@ The component SHALL derive variant paths from the base image path, including Web
 - **AND** desktop WebP source is `/cookies/HeroBg.webp`
 - **AND** desktop PNG fallback is `/cookies/HeroBg.png`
 
-### Requirement: ResponsiveImage supports custom alt text
-
-The component SHALL accept an `alt` prop for accessibility.
-
-#### Scenario: Alt text applied
-
-- **WHEN** alt prop is provided
-- **THEN** the `<img>` element has the specified alt attribute
-
-### Requirement: ResponsiveImage supports fill mode
-
-The component SHALL support a fill mode for background-style images that cover their container.
-
-#### Scenario: Fill mode styling
-
-- **WHEN** fill prop is true
-- **THEN** the image uses `object-fit: cover` and fills its container
-
-### Requirement: Section backgrounds use responsive images
-
-The Hero, Historia, and Gift sections SHALL use ResponsiveImage for their background images.
-
-#### Scenario: Hero background
-
-- **WHEN** Hero section renders
-- **THEN** background uses `/cookies/HeroBg` with responsive variants
-
-#### Scenario: Historia image
-
-- **WHEN** Historia section renders
-- **THEN** section image uses `/cookies/HistoriaImage` with responsive variants
-
-#### Scenario: Gift image
-
-- **WHEN** Gift section renders
-- **THEN** section image uses `/cookies/GiftImage` with responsive variants
+## ADDED Requirements
 
 ### Requirement: Product images use WebP with fallback
 
