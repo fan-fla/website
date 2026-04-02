@@ -20,7 +20,7 @@ export function HistoriaSection() {
           </span>
 
           <h2 className="font-poppins text-[24px] font-bold leading-[1.2] text-[var(--text-dark)] md:text-[32px] lg:text-[36px]">
-            Nascido em Maputo,{"\n"}Feito com Alma
+            Nascido em Maputo,{"\n"}feito de Moçambique
           </h2>
 
           <div className="h-[3px] w-[60px] rounded-sm bg-[#E8A832]" />

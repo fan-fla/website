@@ -17,11 +17,11 @@ export function HeroSection() {
         <div className="absolute inset-x-4 bottom-8 md:inset-x-auto md:bottom-12 md:left-1/2 md:w-[600px] md:-translate-x-1/2 lg:bottom-[60px] lg:w-[900px]">
           <div className="flex flex-col items-center gap-4 rounded-2xl bg-[#2D1B14CC] px-6 py-8 md:px-10 md:py-10 lg:gap-4 lg:px-12 lg:py-8">
             <h1 className="font-poppins text-center text-[28px] font-bold leading-tight tracking-tight text-[#E8A832] md:text-[40px] lg:text-[52px] lg:tracking-[-1px]">
-              Um Gosto de Quero Mais
+              Com gosto de quero mais
             </h1>
             <p className="max-w-[750px] text-center font-inter text-[16px] font-normal leading-[1.6] text-white/85 md:text-[18px] lg:text-[22px]">
-              Cookies caseiros e saudáveis, feitos à mão em Maputo com
-              ingredientes naturais da nossa terra.
+              Valorizamos o natural, o local, transformamos ingredientes simples
+              em experiências autênticas e nutritivas.
             </p>
           </div>
         </div>
