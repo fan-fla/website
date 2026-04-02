@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ZoomIn } from "lucide-react";
-import { siteConfig } from "@/app/data/site";
+import { buildWhatsAppUrl } from "@/app/data/site";
 import { ImageModal } from "./ImageModal";
 import { OptimizedImage } from "./OptimizedImage";
 
@@ -11,6 +11,7 @@ interface ProductCardProps {
   description: string;
   price: string;
   image: string;
+  whatsappMessage?: string;
 }
 
 export function ProductCard({
@@ -18,6 +19,7 @@ export function ProductCard({
   description,
   price,
   image,
+  whatsappMessage,
 }: ProductCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -49,7 +51,7 @@ export function ProductCard({
             {price}
           </p>
           <a
-            href={siteConfig.whatsapp.url}
+            href={buildWhatsAppUrl(whatsappMessage)}
             className="font-inter text-[14px] font-bold text-[var(--flafla-orange)] transition-colors hover:text-[#D4451A] md:text-[15px]"
           >
             Quero este →

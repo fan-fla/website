@@ -8,3 +8,10 @@ export const siteConfig = {
     facebook: "https://facebook.com/flafla",
   },
 } as const;
+
+export function buildWhatsAppUrl(message?: string): string {
+  if (message) {
+    return `${siteConfig.whatsapp.url}?text=${encodeURIComponent(message)}`;
+  }
+  return siteConfig.whatsapp.url;
+}

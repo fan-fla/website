@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { ResponsiveImage } from "@/app/components/ui/ResponsiveImage";
-import { siteConfig } from "@/app/data/site";
+import { buildWhatsAppUrl } from "@/app/data/site";
 
 export function GiftSection() {
   return (
@@ -40,7 +40,7 @@ export function GiftSection() {
         </p>
 
         <a
-          href={siteConfig.whatsapp.url}
+          href={buildWhatsAppUrl("Olá! Gostaria de encomendar uma embalagem para presente. Podem ajudar-me?")}
           className="flex w-fit items-center gap-2.5 rounded-[30px] bg-[var(--flafla-dark-brown)] px-8 py-4 font-inter text-[14px] font-bold text-white transition-transform hover:scale-105 md:text-[15px]"
         >
           <MessageCircle className="h-5 w-5" />

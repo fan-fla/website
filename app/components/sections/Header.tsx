@@ -4,7 +4,7 @@ import { MessageCircle, Menu, X, Instagram, Facebook } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { FlaFlaLogo } from "@/app/components/brand/FlaFlaLogo";
 import { navLinks } from "@/app/data/navigation";
-import { siteConfig } from "@/app/data/site";
+import { siteConfig, buildWhatsAppUrl } from "@/app/data/site";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,7 +47,7 @@ export function Header() {
 
         {/* Desktop CTA - visible only on lg+ */}
         <a
-          href={siteConfig.whatsapp.url}
+          href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
           className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-6 py-2.5 font-inter text-[13px] font-semibold text-white transition-transform hover:scale-105 lg:flex"
         >
           <MessageCircle className="h-4 w-4" />
@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-3 lg:hidden">
           {/* Tablet CTA - visible on md to lg */}
           <a
-            href={siteConfig.whatsapp.url}
+            href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
             className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-5 py-2 font-inter text-[12px] font-semibold text-white transition-transform hover:scale-105 md:flex"
           >
             <MessageCircle className="h-4 w-4" />
@@ -117,7 +117,7 @@ export function Header() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href={siteConfig.whatsapp.url}
+                href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
                 className="text-[var(--text-dark)]/60 transition-colors hover:text-[var(--text-dark)]"
                 aria-label="WhatsApp"
               >
@@ -127,7 +127,7 @@ export function Header() {
 
             {/* WhatsApp CTA - mobile only */}
             <a
-              href={siteConfig.whatsapp.url}
+              href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
               className="mt-6 flex w-full max-w-[280px] items-center justify-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-6 py-3.5 font-inter text-[14px] font-semibold text-white md:hidden"
             >
               <MessageCircle className="h-5 w-5" />

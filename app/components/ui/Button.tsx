@@ -1,11 +1,12 @@
 import { MessageCircle } from "lucide-react";
-import { siteConfig } from "@/app/data/site";
+import { buildWhatsAppUrl } from "@/app/data/site";
 
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "dark";
   size?: "default" | "large";
   showIcon?: boolean;
+  message?: string;
   className?: string;
 }
 
@@ -14,6 +15,7 @@ export function WhatsAppButton({
   variant = "dark",
   size = "default",
   showIcon = true,
+  message,
   className = "",
 }: ButtonProps) {
   const baseClasses =
@@ -31,7 +33,7 @@ export function WhatsAppButton({
 
   return (
     <a
-      href={siteConfig.whatsapp.url}
+      href={buildWhatsAppUrl(message)}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
       {showIcon && <MessageCircle className="h-5 w-5" />}
