@@ -17,6 +17,8 @@ export function CTASection() {
 
         <a
           href={buildWhatsAppUrl("Olá! Quero fazer uma encomenda de bolachas Fla Fla. Podem ajudar?")}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2.5 rounded-[35px] bg-[var(--flafla-dark-brown)] px-7 py-4 font-inter text-[13px] font-bold text-white shadow-[0_6px_24px_rgba(0,0,0,0.2)] transition-transform hover:scale-105 md:text-[14px]"
         >
           <MessageCircle className="h-5 w-5" />

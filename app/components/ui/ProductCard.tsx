@@ -52,6 +52,8 @@ export function ProductCard({
           </p>
           <a
             href={buildWhatsAppUrl(whatsappMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-inter text-[14px] font-bold text-[var(--flafla-orange)] transition-colors hover:text-[#D4451A] md:text-[15px]"
           >
             Quero este →

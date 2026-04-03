@@ -1,7 +1,7 @@
 export const siteConfig = {
   whatsapp: {
-    number: "258840000000",
-    url: "https://wa.me/258840000000",
+    number: "258857291945",
+    url: "https://wa.me/258857291945",
   },
   social: {
     instagram: "https://instagram.com/flafla",

@@ -36,6 +36,8 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   className="text-white/60 transition-colors hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                 >
                   <Icon className="h-5 w-5" />

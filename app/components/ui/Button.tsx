@@ -34,6 +34,8 @@ export function WhatsAppButton({
   return (
     <a
       href={buildWhatsAppUrl(message)}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
       {showIcon && <MessageCircle className="h-5 w-5" />}
