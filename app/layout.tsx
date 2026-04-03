@@ -17,7 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fla Fla - Cookies Artesanais de Moçambique",
+  metadataBase: new URL("https://www.fanfla.com"),
+  title: "Fan Fla - Cookies Artesanais de Moçambique",
   description:
     "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra. Sem açúcar refinado, sem conservantes.",
   keywords: [
@@ -31,10 +32,27 @@ export const metadata: Metadata = {
     "natural",
   ],
   openGraph: {
-    title: "Fla Fla - Cookies Artesanais de Moçambique",
+    title: "Fan Fla - Cookies Artesanais de Moçambique",
     description:
       "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra.",
     type: "website",
+    url: "https://www.fanfla.com",
+    siteName: "Fan Fla",
+    images: [
+      {
+        url: "/cookies/matchies.png",
+        width: 864,
+        height: 1184,
+        alt: "Cookies artesanais Fan Fla",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fan Fla - Cookies Artesanais de Moçambique",
+    description:
+      "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra.",
+    images: ["/cookies/matchies.png"],
   },
 };
 
