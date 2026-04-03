@@ -19,11 +19,11 @@ export function WhatsAppButton({
   className = "",
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2.5 rounded-[30px] font-inter font-bold text-white transition-transform hover:scale-105";
+    "inline-flex items-center justify-center gap-2.5 rounded-[30px] font-inter font-bold text-white transition-colors";
 
   const variantClasses = {
-    primary: "bg-[var(--flafla-orange)]",
-    dark: "bg-[var(--flafla-dark-brown)]",
+    primary: "bg-[var(--flafla-orange)] hover:bg-[#d9552a]",
+    dark: "bg-[var(--flafla-dark-brown)] hover:bg-[#3d2a22]",
   };
 
   const sizeClasses = {

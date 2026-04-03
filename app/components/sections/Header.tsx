@@ -96,7 +96,7 @@ export function Header() {
           href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-transform hover:scale-105 xl:flex"
+          className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-[#3d2a22] xl:flex"
         >
           <MessageCircle className="h-4 w-4" />
           Pedir no WhatsApp
@@ -109,7 +109,7 @@ export function Header() {
             href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-5 py-2 font-inter text-[12px] font-semibold text-white transition-transform hover:scale-105 md:flex"
+            className="hidden items-center gap-2 rounded-3xl bg-[var(--flafla-dark-brown)] px-5 py-2 font-inter text-[12px] font-semibold text-white transition-colors hover:bg-[#3d2a22] md:flex"
           >
             <MessageCircle className="h-4 w-4" />
             Pedir no WhatsApp
