@@ -4,7 +4,7 @@ import { ResponsiveImage } from "@/app/components/ui/ResponsiveImage";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full">
+    <section id="inicio" className="relative w-full">
       <div className="relative h-[500px] w-full overflow-hidden md:h-[600px] lg:h-[720px]">
         <ResponsiveImage
           basePath="/cookies/HeroBg.png"

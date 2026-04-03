@@ -158,7 +158,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section>
+    <section id="testemunhos">
       <CapulanaStrip />
       <div className="w-full bg-[var(--flafla-dark-brown)] px-5 py-12 md:px-10 md:py-14 lg:px-20 lg:py-[50px]">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-10 md:gap-12">
