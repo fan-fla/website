@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -66,7 +67,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://wa.me" />
       </head>
-      <body className="h-full font-inter antialiased">{children}</body>
+      <body className="h-full font-inter antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
