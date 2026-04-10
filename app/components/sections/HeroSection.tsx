@@ -7,7 +7,7 @@ export function HeroSection() {
     <section id="inicio" className="relative w-full">
       <div className="relative h-[500px] w-full overflow-hidden md:h-[600px] lg:h-[720px]">
         <ResponsiveImage
-          basePath="/cookies/HeroBg.png"
+          basePath="/cookies/FanFlaBanner.png"
           alt="Fla Fla cookies artesanais"
           fill
           loading="eager"

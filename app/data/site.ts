@@ -4,7 +4,7 @@ export const siteConfig = {
     url: "https://wa.me/258857291945",
   },
   social: {
-    instagram: "https://instagram.com/flafla",
+    instagram: "https://www.instagram.com/fanflaonline?igsh=ZDNidnY0eXVuamc1",
     facebook: "https://facebook.com/flafla",
   },
 } as const;

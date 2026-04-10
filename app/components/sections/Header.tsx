@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Menu, X, Instagram, Facebook } from "lucide-react";
+import { MessageCircle, Menu, X, Instagram } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { FlaFlaLogo } from "@/app/components/brand/FlaFlaLogo";
 import { navLinks } from "@/app/data/navigation";
@@ -166,13 +166,13 @@ export function Header() {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href={siteConfig.social.facebook}
                 className="text-[var(--text-dark)]/60 transition-colors hover:text-[var(--text-dark)]"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
+              </a> */}
               <a
                 href={buildWhatsAppUrl("Olá! Quero saber mais sobre as bolachas Fla Fla. Podem ajudar-me?")}
                 target="_blank"

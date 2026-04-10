@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { FlaFlaLogo } from "@/app/components/brand/FlaFlaLogo";
 import { footerLinks } from "@/app/data/navigation";
 import { siteConfig, buildWhatsAppUrl } from "@/app/data/site";
@@ -6,7 +6,7 @@ import { siteConfig, buildWhatsAppUrl } from "@/app/data/site";
 export function Footer() {
   const socialLinks = [
     { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
-    { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
+    // { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
     { icon: MessageCircle, href: buildWhatsAppUrl("Olá! Quero saber mais sobre os produtos Fla Fla."), label: "WhatsApp" },
   ];
 

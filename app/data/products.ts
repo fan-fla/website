@@ -11,7 +11,7 @@ export const cookies: Product[] = [
     name: "Lhaties",
     description:
       "Cookies elaborados com farinha de batata-doce de polpa alaranjada. Fonte de betacaroteno e vitamina A. Adoçados com mel puro.",
-    price: "210 MT / 6 unidades",
+    price: "220 MT / 6 unidades",
     image: "/cookies/lhaties.png",
     whatsappMessage:
       "Olá! Gostaria de encomendar os cookies Lhaties de batata-doce. Podem ajudar-me?",
@@ -20,7 +20,7 @@ export const cookies: Product[] = [
     name: "Matchies",
     description:
       "Feitos com farinha de mandioca fresca, representam o Norte moçambicano. Textura única e sabor autêntico. Sem glúten.",
-    price: "210 MT / 6 unidades",
+    price: "220 MT / 6 unidades",
     image: "/cookies/matchies.png",
     whatsappMessage:
       "Olá! Quero encomendar os cookies Matchies de mandioca. Como posso fazer?",
@@ -29,7 +29,7 @@ export const cookies: Product[] = [
     name: "Mifuguies",
     description:
       "Combinação de aveia integral e banana madura do Centro de Moçambique. Rico em fibras. Perfeito para o pequeno-almoço.",
-    price: "210 MT / 6 unidades",
+    price: "220 MT / 6 unidades",
     image: "/cookies/mifuguies.png",
     whatsappMessage:
       "Olá! Gostaria de encomendar os cookies Mifuguies de aveia e banana. Podem ajudar?",
@@ -59,7 +59,7 @@ export const barrinhas: Product[] = [
     name: "Barrinha Frutmela",
     description:
       "Granola artesanal com banana madura e frutos secos. Adoçada com mel da província de Manica. Perfeita para pequeno-almoço.",
-    price: "255 MT / 6 unidades",
+    price: "260 MT / 6 unidades",
     image: "/cookies/frutmela.png",
     whatsappMessage:
       "Olá! Quero encomendar a Barrinha Frutmela de granola e mel. Como posso fazer?",
@@ -68,7 +68,7 @@ export const barrinhas: Product[] = [
     name: "Barrinha Chocomela",
     description:
       "Granola crocante, pasta de amendoim e chocolate de qualidade. Adoçada com mel puro. Equilíbrio entre indulgência e nutrição.",
-    price: "380 MT / 6 unidades",
+    price: "410 MT / 6 unidades",
     image: "/cookies/chocomela.png",
     whatsappMessage:
       "Olá! Gostaria de encomendar a Barrinha Chocomela de chocolate e amendoim. Podem ajudar?",
