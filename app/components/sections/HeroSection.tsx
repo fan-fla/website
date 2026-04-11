@@ -5,13 +5,14 @@ import { ResponsiveImage } from "@/app/components/ui/ResponsiveImage";
 export function HeroSection() {
   return (
     <section id="inicio" className="relative w-full">
-      <div className="relative h-[500px] w-full overflow-hidden md:h-[600px] lg:h-[720px]">
+      <div className="relative h-[500px] w-full overflow-hidden md:h-[600px] lg:aspect-[1366/768] lg:h-auto lg:max-h-[780px]">
         <ResponsiveImage
           basePath="/cookies/FanFlaBanner.png"
           alt="Fla Fla cookies artesanais"
           fill
           loading="eager"
           fetchPriority="high"
+          className="object-[center_25%]"
         />
 
         <div className="absolute inset-x-4 bottom-8 md:inset-x-auto md:bottom-12 md:left-1/2 md:w-[600px] md:-translate-x-1/2 lg:bottom-[60px] lg:w-[900px]">
