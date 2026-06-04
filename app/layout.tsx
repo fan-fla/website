@@ -20,11 +20,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.seo.siteUrl),
-  title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+  title: "Fan Fla - Cookies Artesanais de Moçambique",
   description: siteConfig.seo.description,
   keywords: [...siteConfig.seo.keywords],
   openGraph: {
-    title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+    title: "Fan Fla - Cookies Artesanais de Moçambique",
     description: siteConfig.seo.description,
     type: "website",
     url: siteConfig.seo.siteUrl,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+    title: "Fan Fla - Cookies Artesanais de Moçambique",
     description: siteConfig.seo.description,
     images: [`${siteConfig.seo.siteUrl}/cookies/matchies.png`],
   },
