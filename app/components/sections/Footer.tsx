@@ -51,7 +51,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-2 md:flex-row md:justify-between">
           <p className="font-inter text-[11px] text-white/40 md:text-[12px]">
-            © 2025 Fla Fla — Bolachas Artesanais de Moçambique
+            © {new Date().getFullYear()} Fla Fla — Bolachas Artesanais de Moçambique
           </p>
           <p className="font-inter text-[11px] text-white/40 md:text-[12px]">
             Feito com amor em Maputo

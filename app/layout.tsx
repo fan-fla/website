@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { siteConfig } from "./data/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -18,30 +19,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.fanfla.com"),
-  title: "Fan Fla - Cookies Artesanais de Moçambique",
-  description:
-    "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra. Sem açúcar refinado, sem conservantes.",
-  keywords: [
-    "cookies",
-    "bolachas",
-    "Moçambique",
-    "Maputo",
-    "artesanal",
-    "saudável",
-    "sem açúcar",
-    "natural",
-  ],
+  metadataBase: new URL(siteConfig.seo.siteUrl),
+  title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+  description: siteConfig.seo.description,
+  keywords: [...siteConfig.seo.keywords],
   openGraph: {
-    title: "Fan Fla - Cookies Artesanais de Moçambique",
-    description:
-      "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra.",
+    title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+    description: siteConfig.seo.description,
     type: "website",
-    url: "https://www.fanfla.com",
+    url: siteConfig.seo.siteUrl,
     siteName: "Fan Fla",
     images: [
       {
-        url: "/cookies/matchies.png",
+        url: `${siteConfig.seo.siteUrl}/cookies/matchies.png`,
         width: 864,
         height: 1184,
         alt: "Cookies artesanais Fan Fla",
@@ -50,11 +40,27 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fan Fla - Cookies Artesanais de Moçambique",
-    description:
-      "Cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra.",
-    images: ["/cookies/matchies.png"],
+    title: "Fan Fla | Fla Fla - Cookies Artesanais de Moçambique",
+    description: siteConfig.seo.description,
+    images: [`${siteConfig.seo.siteUrl}/cookies/matchies.png`],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Fan Fla",
+  alternateName: [...siteConfig.seo.brandAliases],
+  url: siteConfig.seo.siteUrl,
+  telephone: `+${siteConfig.whatsapp.number}`,
+  image: `${siteConfig.seo.siteUrl}/cookies/matchies.png`,
+  description: siteConfig.seo.description,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Maputo",
+    addressCountry: "MZ",
+  },
+  servesCuisine: "Cookies artesanais",
 };
 
 export default function RootLayout({
@@ -66,6 +72,10 @@ export default function RootLayout({
     <html lang="pt" className={`${poppins.variable} ${inter.variable} h-full`}>
       <head>
         <link rel="preconnect" href="https://wa.me" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="h-full font-inter antialiased">
         {children}
