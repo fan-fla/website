@@ -11,12 +11,13 @@ export const siteConfig = {
     siteUrl: "https://www.fanfla.com",
     description:
       "Fan Fla — cookies caseiros e saudáveis, feitos à mão em Maputo com ingredientes naturais da nossa terra. Sem açúcar refinado, sem conservantes.",
-    brandAliases: ["Fan Fla", "Fla Fla", "FlaFla", "fanfla"],
+    brandAliases: ["Fan Fla", "Fla Fla", "FlaFla", "fanfla", "fan fla"],
     keywords: [
       "Fan Fla",
       "Fla Fla",
       "FlaFla",
       "fanfla",
+      "fan fla",
       "fan fla cookies",
       "cookies",
       "bolachas",
